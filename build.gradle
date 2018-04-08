@@ -1,0 +1,27 @@
+plugins {
+  id 'com.github.johnrengelman.shadow' version '2.0.1'
+  id 'application'
+}
+
+repositories {
+  mavenLocal()
+  jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.43'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.1.4'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.7.8'    
+}
+
+mainClassName = 'com.jerolba.benchmark.JpaSimpleInsert'
+
+shadowJar {
+    version = null
+    classifier = null
+}

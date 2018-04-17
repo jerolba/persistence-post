@@ -59,7 +59,8 @@ then
 	mkdir log
 fi
 
-classes=("JpaSimpleInsert" "JpaSimpleInsertInBlocks" "JpaSimpleInsertInBlocksFlush" "JpaBatchIdentity" "JpaBatchInsert" "JpaBatchInsertStatementRewrite")
+#classes=("JpaSimpleInsert" "JpaSimpleInsertInBlocks" "JpaSimpleInsertInBlocksFlush" "JpaBatchIdentity" "JpaBatchInsert" "JpaBatchInsertStatementRewrite")
+classes=("JdbcSimpleInsert" "JdbcSimpleInsertInBlocks" "JdbcBatchInsert" "JdbcBatchInsertStatementRewrite")
 sizes=(1000)
 for db in "${dbs[@]}"
 do

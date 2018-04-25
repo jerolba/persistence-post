@@ -11,12 +11,12 @@ You must have Docker installed (for the databases).
 ## How to run the benchmark yourself
 
 1. Download the dataset
-* `chmod +x downloadDataset.sh`
-* `./downloadDataset.sh`
+   * `chmod +x downloadDataset.sh`
+   * `./downloadDataset.sh`
 
 2. Generate the JAR and copy it to the root folder of the repo
-* `gradle build`
-* `cp ./build/libs/persistence-post.jar .`
+   * `gradle build`
+   * `cp ./build/libs/persistence-post.jar .`
 
 3. Depending on the database you want to try:
 
@@ -37,11 +37,12 @@ You must have Docker installed (for the databases).
         * Check that it's up and running (password 'mysecretpassword'): `psql -h 127.0.0.1 -p 5432 -U postgres`
 
 6. Run the benchmark
-* `chmod +x run.sh`
-* For MySQL: `./run.sh -m 127.0.0.1`
-* For PostgreSQL: `./run.sh -p 127.0.0.1`
+   * `chmod +x run.sh`
+   * For MySQL: `./run.sh -m 127.0.0.1`
+   * For PostgreSQL: `./run.sh -p 127.0.0.1`
 
-7. Check that the benchmark is running.
+7. Check that the benchmark is running
+
 You should see some output here: `tail -f log/JdbcSimpleInsert_<db_type>_1000_1.log`, something similar to:
 ```
 ➜  persistence-post git:(master) ✗ tail -f log/JdbcSimpleInsert_postgres_1000_1.log

@@ -22,7 +22,6 @@ You must have Docker installed (for the databases).
 
     3.1. MySQL
     * Install the database client (in case you don't have it, just for checking the connection)
-        * `sudo apt-get install postgresql-client`
         * `sudo apt-get install mysql-client`
     * Run a MySQL from a Docker
         * `docker run --name jerolba-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -e MYSQL_DATABASE=testdb -e MYSQL_USER=test -e MYSQL_PASSWORD=test --publish 127.0.0.1:3306:3306 -d mysql:5.6.35`
@@ -31,7 +30,6 @@ You must have Docker installed (for the databases).
     3.2. PostgreSQL
     * Install the database client (in case you don't have it, just for checking the connection)
         * `sudo apt-get install postgresql-client`
-        * `sudo apt-get install mysql-client`
     * Run a PostgreSQL from a Docker
         * `docker run --name jerolba-postgres -e POSTGRES_USER=test -e POSTGRES_PASSWORD=test -e POSTGRES_DB=testdb --publish 127.0.0.1:5432:5432 -d postgres:9.6.8`
         * Check that it's up and running (password 'mysecretpassword'): `psql -h 127.0.0.1 -p 5432 -U postgres`

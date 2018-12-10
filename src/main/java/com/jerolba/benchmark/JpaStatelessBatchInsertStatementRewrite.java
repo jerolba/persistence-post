@@ -26,8 +26,9 @@ import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.Properties;
 
-/*
- * Persist all information in PostgreSQL or MySQL using JPA batched inserts with Statement Rewrite
+/**
+ * Persist all information in PostgreSQL or MySQL using JPA batched inserts with Statement Rewrite.
+ * This implementation uses a {@link StatelessSession}.
  */
 public class JpaStatelessBatchInsertStatementRewrite {
 
